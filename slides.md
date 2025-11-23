@@ -17,18 +17,17 @@ Using Marp + Markdown to create version-controlled, multi-format product docs.
 
 ---
 
+<!-- _class: highlight-list -->
+
 # Why Marp for Product Documentation?
 
-- Single source of truth in Markdown
-- Version control with Git (branches, PRs, reviews)
+- Single source of truth in Markdown  
+- Version control with Git (branches, PRs, reviews)  
 - Export to:
-  - PDF
-  - HTML
+  - PDF  
+  - HTML  
   - PowerPoint (PPTX)
 - Easy to automate in CI/CD
-
-<!-- Custom styling via directive -->
-<!-- _class: highlight-list -->
 
 ---
 
@@ -39,9 +38,26 @@ A typical repo layout:
 ```text
 docs/
   ├─ slides.md          # This Marp deck
-  ├─ theme-iitm-docs.css
+  ├─ theme-iitm-docs.css (optional)
   └─ images/
      └─ background.jpg
+```
+
+---
+
+# Algorithmic Complexity Example
+
+Inline math: $\mathcal{O}(n \log n)$  
+
+Block math:
+
+$$
+T(n) =
+\begin{cases}
+\mathcal{O}(1), & n \le 1 \\
+\mathcal{O}(n \log n), & n > 1
+\end{cases}
+$$
 
 ---
 
@@ -53,6 +69,8 @@ _class: bg-cover
 # Background Slide
 
 This slide uses a full background image.
+
+---
 
 ```css
 /* @theme iitm-docs */
@@ -77,3 +95,4 @@ section.bg-cover {
   background-size: cover;
   background-position: center;
 }
+```
